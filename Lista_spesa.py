@@ -21,13 +21,23 @@ def Removeproduct():
     inp1 = int(input("Inserisci l'ID del prodotto che vuoi rimuovere: "))
     listaSpesa.pop(inp1)
 
+#CONTA I PRODOTTI
+def Countproduct():
+    print("NUMERO PRODOTTI:")
+    print(len(listaSpesa))
+
+#SVUOTA LA LISTA    
+def Clearproduct():
+    listaSpesa.clear()
 
 while True:
     print("""
     1) AGGIUNGI PRODOTTO
     2) VISUALIZZA PRODOTTO
     3) RIMUOVI PRODOTTO
-    4) ESCI
+    4) CONTA I PRODOTTI
+    5) SVUOTA LA LISTA
+    6) ESCI
     """)
     Opzinp = int(input(""))
     if Opzinp == 1:
@@ -37,5 +47,9 @@ while True:
     elif Opzinp == 3:
         Removeproduct()
     elif Opzinp == 4:
+        Countproduct()
+    elif Opzinp == 5:
+        Clearproduct()
+    elif Opzinp == 6:
         break
 
